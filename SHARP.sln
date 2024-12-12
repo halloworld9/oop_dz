@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebus", "Rebus\Rebus.csproj", "{3E51D461-1BAF-4D26-BCBB-FB6509AF1E7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{025E57C3-709E-4AB1-96DB-DE0E288669CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{3E51D461-1BAF-4D26-BCBB-FB6509AF1E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E51D461-1BAF-4D26-BCBB-FB6509AF1E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E51D461-1BAF-4D26-BCBB-FB6509AF1E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025E57C3-709E-4AB1-96DB-DE0E288669CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025E57C3-709E-4AB1-96DB-DE0E288669CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025E57C3-709E-4AB1-96DB-DE0E288669CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025E57C3-709E-4AB1-96DB-DE0E288669CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

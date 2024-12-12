@@ -123,13 +123,32 @@ public class SquareMatrix : Matrix
 
     public double Det()
     {
-        var t = Triangular();
-        var res = 1.0;
-        for (int i = 0; i < t.rows; i++)
+        if (rows == 1) return this[0, 0];
+        if (rows == 2)
         {
-            res *= t[i, i];
+            return this[0, 0] * this[1, 1] - this[0, 1] * this[1, 0];
         }
+        var res = 0.0;
 
+        for (int i = 0; i < rows; i++)
+        {
+            var mult = this[0, i];
+            if (i % 2 == 1) mult *= -1;
+            var n1 = rows - 1;
+            var matrix = new SquareMatrix(n1);
+            for (int j = 0; j < n1; j++)
+            {
+                int y = j+1;
+                for (int k = 0; k < n1; k++)
+                {
+                    int x = k;
+                    if (x >= i) x+=1;
+                    matrix[j, k] = this[y, x];
+                }
+            }
+
+            res += mult * matrix.Det();
+        }
         return res;
     }
 
@@ -252,10 +271,8 @@ public class SquareMatrix : Matrix
 
     public static void Main(string[] args)
     {
-        var m = new SquareMatrix(3, Console.In);
-        var reversed = m.Reverse();
+        var m = new SquareMatrix(4, Console.In);
         Console.WriteLine(m);
-        Console.WriteLine(reversed);
-        Console.WriteLine(m * reversed);
+        Console.WriteLine(m.Det());
     }
 }
